@@ -1,0 +1,9 @@
+{
+  "project_name": "Project name",
+  "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+  "project_short_description": "Custom description",
+  "postgres_db": "db",
+  "postgres_user": "postgres",
+  "postgres_password": "postgres",
+  "postgres_host": "127.0.0.1:5432"
+}
