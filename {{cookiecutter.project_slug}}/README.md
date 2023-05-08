@@ -15,15 +15,6 @@ make run-local
 ```
 In this case database is running in a container and app is running locally.
 
-## Makefile
-
-Makefile has four targets:
-
-- `install`: Installs project dependencies using Poetry.
-- `compose`: Starts Docker Compose in detached mode.
-- `run-local`: Starts the local development environment using Docker Compose, Alembic for database migration, and Uvicorn for running the FastAPI app. It also copies the `compose.env` file to `.env` for environment variable configuration.
-- `migrate`: Runs Alembic migration to upgrade the database to the latest revision.
-
 ## CI/CD: Github Actions
 This GitHub Action template automates the build and deployment of a Docker 
 image to a remote server using Ansible.

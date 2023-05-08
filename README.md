@@ -19,7 +19,7 @@ Once Cookiecutter is installed, you can generate a new project using this templa
 cookiecutter gh:AndreyKlychnikov/simple-fastapi-template
 ```
 
-You will be prompted to provide values for the variables defined in the `cookiecutter.json` file.
+You will be prompted to provide values for template.
 
 ## Variables
 
