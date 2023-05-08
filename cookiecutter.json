@@ -2,8 +2,21 @@
   "project_name": "Project name",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
   "project_short_description": "Custom description",
-  "postgres_db": "db",
+  "secret_key": "changethis",
+  "postgres_db": "app",
   "postgres_user": "postgres",
-  "postgres_password": "postgres",
-  "postgres_host": "127.0.0.1:5432"
+  "postgres_password": "changethis",
+  "docker_registry_url": "registry.hub.docker.com",
+  "docker_image_name": "{{ cookiecutter.project_slug }}",
+  "deploy_branch": "develop",
+  "domain": "example.com",
+  "vps_host": "YOUR_VPS_IP",
+  "vps_user": "user",
+  "_copy_without_render": [
+        "*.j2",
+        "app/",
+        "alembic/",
+        "ansible/deploy.yml",
+        "ansible/tasks"
+    ]
 }
