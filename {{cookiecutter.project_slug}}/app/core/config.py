@@ -2,6 +2,9 @@ import secrets
 from typing import Any, Dict, List, Optional, Union
 
 from pydantic import AnyHttpUrl, BaseSettings, PostgresDsn, validator
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class Settings(BaseSettings):

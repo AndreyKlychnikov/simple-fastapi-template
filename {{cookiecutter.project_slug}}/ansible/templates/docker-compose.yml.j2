@@ -6,25 +6,18 @@ services:
     volumes:
       - app-db-data:/var/lib/postgresql/data/pgdata
     env_file:
-      - compose.env
+      - .env
     environment:
       - PGDATA=/var/lib/postgresql/data/pgdata
-    ports:
-      - "5432:5432"
 
   app:
+    image: {{ docker_image }}:{{ app_image_version }}
     depends_on:
       - db
     env_file:
-      - compose.env
-    environment:
-      - SERVER_HOST=https://127.0.0.1
-      - POSTGRES_HOST=db
-      # Allow explicit env var override for tests
-    build:
-      context: .
+      - .env
     ports:
-      - "8000:80"
+      - "127.0.0.1:8000:80"
 
 volumes:
   app-db-data:
